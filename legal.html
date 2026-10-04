@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy &amp; Terms – Lantern Apps</title>
+<link rel="stylesheet" href="style.css">
+<meta name="theme-color" content="#0F2A4F">
+<link rel="icon" href="assets/lantern.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+</head>
+<body>
+<div class="bar">
+  <a class="brand" href="./"><img src="assets/lantern.svg" alt="" width="23" height="34"> Lantern <b>Apps</b></a>
+  <nav><a href="./#apps">Apps</a><a href="./#about">About</a><a href="legal.html">Privacy &amp; Terms</a></nav>
+</div>
+<main class="doc"><article>
+  <h1>Privacy &amp; Terms</h1>
+  <p class="meta">Developer: <b>Lantern Apps</b> (AJAS M M) · Last updated: 3 October 2026</p>
+
+  <h2>Our apps</h2>
+  <p>Each app has its own privacy policy and terms, because each app handles different things on your phone. Pick yours:</p>
+  <ul id="list"><li><a href="masjid-alarm/privacy.html">Masjid Alarm</a>: <a href="masjid-alarm/privacy.html">Privacy Policy</a> · <a href="masjid-alarm/terms.html">Terms of Use</a></li></ul>
+
+  <h2>This website</h2>
+  <p>This website has no accounts, no ads, no analytics and no cookies. The only data it receives is what any web server sees when you open a page (such as your IP address and browser type), kept by GitHub Pages, which hosts the site, under <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub's privacy statement</a>. We do not receive or use that data.</p>
+
+  <h2>Contact</h2>
+  <p><a href="mailto:lanternappsstudio@gmail.com">lanternappsstudio@gmail.com</a></p>
+</article></main>
+<footer><img src="assets/lantern.svg" alt="" width="17" height="26">© <span id="year">2026</span> Lantern Apps</footer>
+<script src="apps.js"></script>
+<script>
+  document.getElementById('list').innerHTML = APPS.map(a =>
+    `<li><b>${a.name}</b>: <a href="${a.slug}/privacy.html">Privacy Policy</a> · <a href="${a.slug}/terms.html">Terms of Use</a></li>`).join('');
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

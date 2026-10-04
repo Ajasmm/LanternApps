@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 300" width="200" height="300">
+  <!-- Lantern Apps mark: a gold Ramadan lantern (fanous) with a lit arch window. Transparent background. -->
+  <defs>
+    <radialGradient id="light" cx="0.5" cy="0.62" r="0.6">
+      <stop offset="0" stop-color="#FFF4D2"/>
+      <stop offset="0.45" stop-color="#F6CF6A"/>
+      <stop offset="1" stop-color="#E9B949" stop-opacity="0.35"/>
+    </radialGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <g filter="url(#glow)" stroke="#E9B949" stroke-width="8" stroke-linejoin="round" stroke-linecap="round">
+    <!-- ring and dome -->
+    <circle cx="100" cy="24" r="10" fill="none"/>
+    <path d="M70,72 C70,54 86,44 100,36 C114,44 130,54 130,72 Z" fill="#E9B949"/>
+    <rect x="60" y="72" width="80" height="12" rx="4" fill="#E9B949"/>
+    <!-- glass body -->
+    <path d="M68,84 L132,84 L146,152 L132,220 L68,220 L54,152 Z" fill="#0F2A4F" fill-opacity="0.55"/>
+    <!-- lit arch window -->
+    <path d="M82,206 L82,146 C82,124 92,112 100,102 C108,112 118,124 118,146 L118,206 Z" fill="url(#light)" stroke-width="5"/>
+    <!-- base -->
+    <rect x="60" y="220" width="80" height="12" rx="4" fill="#E9B949"/>
+    <path d="M74,232 L126,232 L112,254 L88,254 Z" fill="#E9B949"/>
+    <circle cx="100" cy="268" r="6" fill="#E9B949"/>
+  </g>
+</svg>

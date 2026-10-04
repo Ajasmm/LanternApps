@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Masjid Alarm – your mosque's Bank &amp; Iqamah alarm</title>
+<meta name="description" content="Masjid Alarm follows your own mosque's Azan (Bank) and Iqamah times, reminds you before Iqamah with an On my way button, and rings only if you don't answer. Offline, no ads, English and Malayalam.">
+<meta name="theme-color" content="#0F2A4F">
+<link rel="stylesheet" href="../style.css">
+<link rel="icon" href="icon-192.webp" type="image/webp">
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+</head>
+<body>
+<div class="bar">
+  <a class="brand" href="../"><img src="../assets/lantern.svg" alt="" width="23" height="34"> Lantern <b>Apps</b></a>
+  <nav><a href="../#apps">Apps</a><a href="../#about">About</a><a href="../legal.html">Privacy &amp; Terms</a></nav>
+</div>
+<main>
+  <p class="back"><a href="../">Lantern Apps</a> / Masjid Alarm</p>
+  <header>
+    <img src="icon-192.webp" alt="" width="104" height="104" fetchpriority="high">
+    <div>
+      <h1>Masjid Alarm</h1>
+      <p class="tag">Never miss Iqamath at your mosque</p>
+    </div>
+  </header>
+
+  <p class="lead">Prayer apps calculate one time for a whole city. Your masjid has its own Bank (Azan) and Iqamah times. Masjid Alarm follows <b>your</b> mosque.</p>
+
+  <p class="cta" id="cta"><a class="btn solid" href="https://play.google.com/store/apps/details?id=com.lanternapps.masjidalarm">Get it on Google Play</a></p>
+
+  <h2>How it works</h2>
+  <ol class="steps">
+    <li>Type today's Bank time at your mosque once. It stays right all year.</li>
+    <li>Before Iqamah you get a reminder: <b>On my way</b> or <b>Skip</b>.</li>
+    <li>No answer? An alarm rings, so you never miss the jamaah.</li>
+  </ol>
+
+  <ul class="chips">
+    <li>Jumu'ah with Khutbah countdown</li>
+    <li>Subh wake-up alarm</li>
+    <li>Silent phone during jamaah</li>
+    <li>Works offline</li>
+    <li>No ads</li>
+    <li>English and Malayalam</li>
+  </ul>
+
+  <h2>Help</h2>
+  <div class="note">
+    <p><b>Alarms not ringing?</b> Open the app → Setup → Alarm checklist, fix anything marked ✗, then tap "Test alarm in 1 minute". On Xiaomi, Vivo, Oppo, Realme and Samsung phones, also allow autostart and set battery to "No restrictions".</p>
+    <p>Questions or feedback: <a href="mailto:lanternappsstudio@gmail.com">lanternappsstudio@gmail.com</a></p>
+  </div>
+
+  <p class="links"><a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Use</a></p>
+
+  <hr>
+  <section lang="ml">
+    <h2>മലയാളം</h2>
+    <p>Masjid Alarm നിങ്ങളുടെ പള്ളിയിലെ ബാങ്കും ഇഖാമത്തും പിന്തുടരുന്നു. ഇഖാമത്തിന് മുമ്പ് "ഞാൻ പോകുന്നു" / "പോകുന്നില്ല" ഓർമ്മപ്പെടുത്തൽ; മറുപടി ഇല്ലെങ്കിൽ അലാറം. ഇന്റർനെറ്റ് വേണ്ട, പരസ്യങ്ങളില്ല.</p>
+    <div class="note"><p><b>അലാറം അടിക്കുന്നില്ലേ?</b> ആപ്പ് → സജ്ജീകരണം → അലാറം ചെക്ക്‌ലിസ്റ്റ് നോക്കി ✗ ഉള്ളവ ശരിയാക്കുക, പിന്നെ "1 മിനിറ്റിൽ ടെസ്റ്റ് അലാറം" ടാപ്പ് ചെയ്യുക.</p></div>
+  </section>
+</main>
+<footer><img src="../assets/lantern.svg" alt="" width="17" height="26">© <span id="year">2026</span> Lantern Apps · <a href="../legal.html">Privacy &amp; Terms</a></footer>
+<script src="../apps.js"></script>
+<script>
+  // The Play button follows apps.js: no link there yet means the app is not live.
+  const app = APPS.find(a => a.slug === 'masjid-alarm');
+  document.getElementById('cta').innerHTML = app.play
+    ? `<a class="btn solid" href="${app.play}">Get it on Google Play</a>`
+    : '<span class="btn off">Coming soon on Google Play</span>';
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

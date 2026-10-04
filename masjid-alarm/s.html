@@ -1,5 +1,5 @@
 <!doctype html>
-<!-- Landing page for shared mosque setups: https://ajasmm.github.io/Masjid-Alarm/s#MASJID1.<code>&n=<name>
+<!-- Landing page for shared mosque setups: https://ajasmm.github.io/LanternApps/masjid-alarm/s#MASJID1.<code>&n=<name>
      The setup is after '#', so it never reaches this server. With App Links verified, Android opens the app
      directly and this page is never shown. -->
 <html lang="en">
@@ -8,7 +8,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Mosque prayer times – Masjid Alarm</title>
 <meta name="robots" content="noindex">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="../style.css">
 <style>
   .big { display: block; text-align: center; margin: 14px 0; padding: 18px; border-radius: 20px; font-size: 1.2rem; font-weight: 700; text-decoration: none; }
   .open { background: var(--gold); color: #2B2000; }
@@ -16,11 +16,18 @@
   .card { background: rgba(6,17,28,.55); border: 1px solid rgba(233,185,73,.6); border-radius: 22px; padding: 22px; }
   code { word-break: break-all; font-size: .8rem; color: var(--soft); }
 </style>
+<meta name="theme-color" content="#0F2A4F">
+<link rel="icon" href="../assets/lantern.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
 </head>
 <body>
+<div class="bar">
+  <a class="brand" href="../"><img src="../assets/lantern.svg" alt="" width="23" height="34"> Lantern <b>Apps</b></a>
+  <nav><a href="../#apps">Apps</a><a href="../#about">About</a><a href="../legal.html">Privacy &amp; Terms</a></nav>
+</div>
 <main>
   <header>
-    <img src="icon-512.png" alt="" width="80" height="80">
+    <img src="icon-192.webp" alt="" width="80" height="80">
     <div><h1>Masjid Alarm</h1><p class="tag">Never miss Iqamath at your mosque</p></div>
   </header>
 
@@ -30,13 +37,13 @@
     <p>Open them in Masjid Alarm. You will see every Bank and Iqamath time, compared with yours, before anything changes.</p>
     <p lang="ml">Masjid Alarm-ൽ തുറക്കുക. എന്തെങ്കിലും മാറുന്നതിന് മുമ്പ് എല്ലാ ബാങ്ക്, ഇഖാമത്ത് സമയങ്ങളും നിങ്ങളുടേതുമായി താരതമ്യം ചെയ്ത് കാണാം.</p>
     <a class="big open" id="open" href="#">Open in Masjid Alarm · ആപ്പിൽ തുറക്കുക</a>
-    <a class="big play" href="https://play.google.com/store/apps/details?id=app.masjidalarm">Get it on Google Play · ഇൻസ്റ്റാൾ ചെയ്യുക</a>
+    <a class="big play" href="https://play.google.com/store/apps/details?id=com.lanternapps.masjidalarm">Get it on Google Play · ഇൻസ്റ്റാൾ ചെയ്യുക</a>
     <p>Just installed? Go back to the message and tap the link again.<br><span lang="ml">ഇൻസ്റ്റാൾ ചെയ്തോ? മെസ്സേജിലേക്ക് തിരികെ പോയി ലിങ്ക് വീണ്ടും ടാപ്പ് ചെയ്യുക.</span></p>
   </div>
 
   <p style="margin-top:28px">If the button doesn't work, copy this code and paste it in Masjid Alarm → Setup → Share mosque setup:</p>
   <code id="code"></code>
-  <p class="links"><a href="index.html">About Masjid Alarm</a> · <a href="privacy.html">Privacy</a></p>
+  <p class="links"><a href="./">About Masjid Alarm</a> · <a href="privacy.html">Privacy</a></p>
 </main>
 <script>
   const frag = location.hash.slice(1);
@@ -46,8 +53,8 @@
   document.getElementById('code').textContent = code;
   // Opens the app if installed; otherwise Chrome goes to the Play Store listing.
   document.getElementById('open').href =
-    'intent://import?c=' + code + (name ? '&n=' + name : '') + '#Intent;scheme=masjidalarm;package=app.masjidalarm;' +
-    'S.browser_fallback_url=' + encodeURIComponent('https://play.google.com/store/apps/details?id=app.masjidalarm') + ';end';
+    'intent://import?c=' + code + (name ? '&n=' + name : '') + '#Intent;scheme=masjidalarm;package=com.lanternapps.masjidalarm;' +
+    'S.browser_fallback_url=' + encodeURIComponent('https://play.google.com/store/apps/details?id=com.lanternapps.masjidalarm') + ';end';
 </script>
 </body>
 </html>
